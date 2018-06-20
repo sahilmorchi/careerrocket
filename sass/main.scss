@@ -1,3 +1,4 @@
-h1 {
-    color: blue;
-}
+@import "sections/header";
+@import "sections/base";
+@import "sections/features";
+@import "sections/notify";
