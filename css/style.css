@@ -5,15 +5,13 @@
   background-color: transparent; }
 
 .form-inline {
-  margin-right: 20vh; }
+  margin-right: 10vh; }
 
 .menu-item {
   color: white;
   font-size: 15px; }
   .menu-item:hover {
     color: rgba(255, 255, 255, 0.712); }
-  .menu-item_contact {
-    margin-right: 40px; }
   .menu-item_notify {
     text-decoration: underline; }
 
