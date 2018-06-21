@@ -1,3 +1,5 @@
+
+
 (function () {
     //initialize firebase
 
@@ -24,10 +26,19 @@
 
 
     if (loginButton) {
+        var alert = $(".alert");
+
+        const closeButtonAppear = () => {
+            alert.css("display", "block");
+        }
+
+        $(".close").click(function () {
+            alert.css("display", "none");
+            console.log("Pressed.")
+        });
 
         //add login event
         loginButton.addEventListener('click', e => {
-            console.log('i am listening');
             //get email and pass
             const email = loginEmail.value;
             const password = loginPassword.value;
@@ -35,31 +46,68 @@
             //sign in
             const promise = auth.signInWithEmailAndPassword(email, password);
             promise
-                .catch(e => console.log(e.message));
-//                .then(console.log("log-in success!"));
-            
-            
+                .catch(e => closeButtonAppear());
+            //                .then(console.log("log-in success!"));
         });
-        
-  
+
+
 
     }
 
 
 
     if (signUpButton) {
+        var alert = $(".alert");
+        var matchingPass = $(".alert2");
+        var allForms = $(".alert3");
+        var badEmail = $('.alert4');
+        
+        const closeButtonAppear = (alert) => {
+            alert.css("display", "block");
+        }
+
+
+        $(".close").click(function () {
+            alert.css("display", "none");
+            allForms.css("display", "none");
+            matchingPass.css("display", "none");
+            badEmail.css("display", "none");
+
+            console.log("Pressed.")
+        });
+
+        // const badEmail = () => {
+        //     badEmail.css("display", "block");
+        //     alert.css("display", "block");
+        //     console.log
+        // }
+
         signUpButton.addEventListener('click', e => {
             //get email and pass
-            //TODO: CHECK for REAL EMAILS
+            //TODO: CHECK for REAL EMAILS (CHECK IF EMAIL IS WELL FORMATED!)
             const email = signUpEmail.value;
             const password = signUpPassword.value;
             const confirmPassword = signUpConfirm.value;
 
-            const auth = firebase.auth();
-            //sign in
-            const promise = auth.createUserWithEmailAndPassword(email, password);
-            promise
-                .catch(e => console.log(e.message));
+            if (email != "" && password != "" && confirmPassword != "") {
+                if (password == confirmPassword) {
+                    const auth = firebase.auth();
+                    //sign in
+                    const promise = auth.createUserWithEmailAndPassword(email, password);
+                    promise
+                        .catch(e => console.log(e.message))
+                    
+                    
+                        
+                } else {
+                    closeButtonAppear(matchingPass);
+                }
+            } else {
+                closeButtonAppear(allForms);
+            }
+
+
+
         });
     }
     //add signup event
@@ -70,12 +118,16 @@
             console.log("Login success!")
             console.log(firebaseUser);
             if (firebaseUser) {
-                window.location = 'dashboard.html'; //After successful login, user will be redirected to home.html
-              }
+                window.location = './studentdashboard/studentdashboard.html'; //After successful login, user will be redirected to home.html
+            }
         } else {
             console.log('not logged in');
             // TODO: Display this text somewhere on the screen for user notice. 
         }
-    }); 
+    });
 
 }());
+
+// document.getElementById("closeButton").addEventListener('click', e => {
+//     console.log("Hello!")
+// });
