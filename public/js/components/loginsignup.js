@@ -119,7 +119,7 @@
             console.log("Login success!")
             console.log(firebaseUser);
             if (firebaseUser) {
-                window.location = '../../studentdashboard/studentdashboard.html'; //After successful login, user will be redirected to home.html
+                window.location = './studentdashboard/studentdashboard.html'; //After successful login, user will be redirected to home.html
             }
         } else {
             console.log('not logged in');
