@@ -115,3 +115,9 @@ body {
     height: 200px;
     margin-bottom: 30px;
 }
+
+input:focus { 
+    outline: none !important;
+    border-color: #EF6950;
+    box-shadow: 0 0 10px #EF6950;
+}
