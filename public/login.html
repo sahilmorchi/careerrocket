@@ -9,6 +9,7 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
     <link rel="stylesheet" href="../css/login.css">
   </head>
   <body>
@@ -19,23 +20,16 @@
     <div class="login-page">
       <div class="form">
         <img class="logo2" src="../img/careerrocket-logo-orange.png" alt="">
-        <form class="register-form">
-          <input type="text" placeholder="name"/>
-          <input type="password" placeholder="password"/>
-          <input type="text" placeholder="email address"/>
-          <button>create</button>
-          <p class="message">Already registered? <a href="#">Sign In</a></p>
-        </form>
         <form class="login-form">
-          <input type="text" placeholder="username"/>
-          <input type="password" placeholder="password"/>
-          <button id="loginButton">login</button>
+          <input id="loginEmail" type="text" placeholder="email"/>
+          <input id="loginPassword" type="password" placeholder="password"/>
+          <button id="loginButton" type="button">login</button>
           <p class="message">Not registered? <a href="signup.html">Create an account</a></p>
         </form>
       </div>
     </div>
     
-    <script src="" async defer></script>
+    <script src="../js/components/loginsignup.js" async defer></script>
   </body>
 </html>
 
