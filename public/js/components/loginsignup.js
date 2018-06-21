@@ -61,7 +61,7 @@
         var matchingPass = $(".alert2");
         var allForms = $(".alert3");
         var badEmail = $('.alert4');
-        
+
         const closeButtonAppear = (alert) => {
             alert.css("display", "block");
         }
@@ -96,15 +96,16 @@
                     const promise = auth.createUserWithEmailAndPassword(email, password);
                     promise
                         .catch(e => console.log(e.message))
-                    
-                    
-                        
+
+
+
                 } else {
                     closeButtonAppear(matchingPass);
                 }
             } else {
                 closeButtonAppear(allForms);
             }
+
 
 
 
@@ -122,7 +123,7 @@
             }
         } else {
             console.log('not logged in');
-            // TODO: Display this text somewhere on the screen for user notice. 
+            // TODO: Display this text somewhere on the screen for user notice.
         }
     });
 
