@@ -69,10 +69,13 @@
         if (firebaseUser) {
             console.log("Login success!")
             console.log(firebaseUser);
+            if (firebaseUser) {
+                window.location = 'dashboard.html'; //After successful login, user will be redirected to home.html
+              }
         } else {
             console.log('not logged in');
             // TODO: Display this text somewhere on the screen for user notice. 
         }
-    });
+    }); 
 
 }());
