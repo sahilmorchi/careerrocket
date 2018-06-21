@@ -1,3 +1,8 @@
+$('#createModal').click(function(event){
+    console.log("Button clicked!");
+});
+
+
 
 $('a[href*="#"]')
 // Remove links that don't actually link to anything
