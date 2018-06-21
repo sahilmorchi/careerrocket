@@ -13,7 +13,7 @@
   background: #FFFFFF;
   max-width: 1000px;
   margin: 0 auto 100px;
-  height: 500px;
+  height: 550px;
   padding: 5vh;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -55,9 +55,9 @@
   color: rgb(236, 87, 87);
   text-decoration: none;
 }
-.form .register-form {
+/* .form .register-form {
   display: none;
-}
+} */
 .container {
   position: relative;
   z-index: 1;
