@@ -59,7 +59,7 @@ a:focus {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #7386D5;
+    background:  rgb(231, 118, 118);
     color: #fff;
     transition: all 0.3s;
 }
@@ -70,12 +70,12 @@ a:focus {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #6d7fcc;
+    background: rgb(209, 114, 114);
 }
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #47748b;
+    border-bottom: 1px solid #c75656;
 }
 
 #sidebar ul p {
@@ -90,7 +90,7 @@ a:focus {
 }
 
 #sidebar ul li a:hover {
-    color: #7386D5;
+    color:  rgb(209, 114, 114);
     background: #fff;
 }
 
@@ -115,7 +115,7 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #6d7fcc;
+    background:  rgb(209, 114, 114);
 }
 
 ul.CTAs {
@@ -132,12 +132,12 @@ ul.CTAs a {
 
 a.download {
     background: #fff;
-    color: #7386D5;
+    color:  rgb(209, 114, 114);
 }
 
 a.article,
 a.article:hover {
-    background: #6d7fcc !important;
+    background:  rgb(209, 114, 114)!important;
     color: #fff !important;
 }
 
@@ -174,4 +174,9 @@ h2 {
 
 .logo {
     height: 50px;
+}
+
+.explore-title {
+    text-align: center;
+    margin-bottom: 20px;
 }
