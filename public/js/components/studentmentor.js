@@ -81,7 +81,7 @@
 
     $('#mentorSubmit').click(function(){
         console.log("Booper");
-        var firebaseRef = firebase.database()
+        // var firebaseRef = firebase.database()
 
         // var specificMentor = firebaseRef.child("users").child("mentors").child("mentor1");
 
@@ -96,11 +96,11 @@
         //     "mentorAbout": mentorAbout.value,
         // })
 
-        firebase.database().ref('users/' + userId).set({
-            username: "hello",
-            email: "kvvetrivel@gmail.com",
-            profile_picture : "hello",
-          });
+        // firebase.database().ref('users/' + userId).set({
+        //     username: "hello",
+        //     email: "kvvetrivel@gmail.com",
+        //     profile_picture : "hello",
+        //   });;
 
 
         window.location = '../../mentordashboard/mentordashboard.html';
