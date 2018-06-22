@@ -117,7 +117,7 @@
             window.location = '../../index.html';
         });
     }
-
+    //hello
     //add a realtime listener
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
