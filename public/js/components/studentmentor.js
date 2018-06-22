@@ -102,6 +102,9 @@
         //     profile_picture : "hello",
         //   });;
 
+        // firebaseRef.set("Hi");
+
+
 
         window.location = '../../mentordashboard/mentordashboard.html';
     })
