@@ -1,5 +1,3 @@
-
-
 (function () {
     //initialize firebase
 
@@ -22,7 +20,7 @@
     const signUpEmail = document.getElementById('signUpEmail');
     const signUpPassword = document.getElementById('signUpPassword');
     const signUpConfirm = document.getElementById('signUpConfirm');
-    //const logoutBtn
+    const logoutButton = document.getElementById('logoutButton');
 
 
     if (loginButton) {
@@ -113,14 +111,19 @@
     }
     //add signup event
 
+    if (logoutButton) {
+        logoutButton.addEventListener('click', e => {
+            firebase.auth().signOut();
+            window.location = '../../index.html';
+        });
+    }
+
     //add a realtime listener
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
             console.log("Login success!")
             console.log(firebaseUser);
-            if (firebaseUser) {
-                window.location = './studentdashboard/studentdashboard.html'; //After successful login, user will be redirected to home.html
-            }
+            window.location = '../../studentdashboard/studentdashboard.html'; //After successful login, user will be redirected to home.html
         } else {
             console.log('not logged in');
             // TODO: Display this text somewhere on the screen for user notice.
