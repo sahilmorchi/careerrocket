@@ -15,18 +15,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
     <link rel="stylesheet" href="./css//studentormentor.css">
 </head>
 
 <body>
 
-    <h1 style="margin-bottom: 90px; text-align: center">Are you a...</h1>
+    <h1 id="object" style="margin-bottom: 90px; text-align: center">Are you a...</h1>
+
 
     <div class="row">
         <div class="student-side col-6">
             <h2 style="text-align: center">Student</h2>
             <div class="center">
-                <a class="btn btn-info" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Enter more.</a>
+                <a class="btn btn-info" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Enter more</a>
 
                 <div class="col">
                     <div class="collapse multi-collapse" id="multiCollapseExample1">
@@ -35,24 +37,24 @@
                                 <label for="">Full Name</label>
                                 <div class="form-group">
                                     <!-- <label style"width: 100%" for="exampleFormControlInput1">First Name</label> -->
-                                    <input style="width: 49%; display: inline-block" type="First Name" class="form-control" id="exampleFormControlInput1" placeholder="First Name">
-                                    <input style="width: 49%; display: inline-block" type="Last Name" class="form-control" id="exampleFormControlInput1" placeholder="Last Name">
+                                    <input style="width: 49%; display: inline-block" type="First Name" class="form-control" id="studentFirstName" placeholder="First Name">
+                                    <input style="width: 49%; display: inline-block" type="Last Name" class="form-control" id="studentLastName" placeholder="Last Name">
 
                                 </div>
                                 <div style="text-align: center" class="form-group">
                                     <label for="exampleFormControlInput1">Email</label>
                                     <div class="center">
-                                        <input style="width: 100%; left: 100%;" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+                                        <input style="width: 100%; left: 100%;" type="email" class="form-control" id="studentEmail" placeholder="Email">
                                     </div>
 
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Phone #</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Phone #">
+                                    <input type="email" class="form-control" id="studentPhone" placeholder="Phone #">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlSelect1">Potential Fields of Interest</label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
+                                    <select class="form-control" id="studentInterest">
                                         <option>Computer Science/IT</option>
                                         <option>Law</option>
                                         <option>Business</option>
@@ -71,11 +73,11 @@
 
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1">About You</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    <textarea class="form-control" id="studentAbout" rows="3"></textarea>
                                 </div>
                             </form>
 
-                                <button type="button" onclick="submitStudent()" id="studentSubmit" class="btn btn-primary">studentSubmit</button>
+                                <button type="button" id="studentSubmit" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
 
@@ -89,7 +91,7 @@
             <h2 style="text-align: center">Mentor</h2>
             <div class="center">
                 <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false"
-                    aria-controls="multiCollapseExample2">Enter more.</button>
+                    aria-controls="multiCollapseExample2">Enter more</button>
 
                 <div class="col">
                     <div class="collapse multi-collapse" id="multiCollapseExample2">
@@ -98,20 +100,27 @@
                                 <label for="">Full Name</label>
                                 <div class="form-group">
                                     <!-- <label style"width: 100%" for="exampleFormControlInput1">First Name</label> -->
-                                    <input style="width: 49%; display: inline-block" type="First Name" class="form-control" id="exampleFormControlInput1" placeholder="First Name">
-                                    <input style="width: 49%; display: inline-block" type="Last Name" class="form-control" id="exampleFormControlInput1" placeholder="Last Name">
+                                    <input style="width: 49%; display: inline-block" type="First Name" class="form-control" id="mentorFirstName" placeholder="First Name">
+                                    <input style="width: 49%; display: inline-block" type="Last Name" class="form-control" id="mentorLastName" placeholder="Last Name">
 
                                 </div>
                                 <div style="text-align: center" class="form-group">
                                     <label for="exampleFormControlInput1">Company</label>
                                     <div class="center">
-                                        <input style="width: 100%; left: 100%;" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Company">
+                                        <input style="width: 100%; left: 100%;" type="email" class="form-control" id="mentorCompany" placeholder="Company">
                                     </div>
 
                                 </div>
+                                <div style="text-align: center" class="form-group">
+                                        <label for="exampleFormControlInput1">Email</label>
+                                        <div class="center">
+                                            <input style="width: 100%; left: 100%;" type="email" class="form-control" id="mentorEmail" placeholder="Email">
+                                        </div>
+    
+                                    </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlSelect1">Field</label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
+                                    <select class="form-control" id="mentorField">
                                         <option>Computer Science/IT</option>
                                         <option>Law</option>
                                         <option>Business</option>
@@ -129,15 +138,15 @@
                                 </div> -->
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Phone #</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Phone #">
+                                    <input type="email" class="form-control" id="mentorPhone" placeholder="Phone #">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1">About You</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    <textarea class="form-control" id="mentorAbout" rows="3"></textarea>
                                 </div>
                             </form>
 
-                            <button type="button" onclick="submitMentor()" id="mentorSubmit" class="btn btn-primary">Submit</button>
+                            <button type="button" id="mentorSubmit" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
                 </div>

@@ -141,9 +141,14 @@
 
 
             if (firebaseUser) {
+
+
                 console.log("Login success!")
                 console.log(firebaseUser);
                 window.location = '../../studentdashboard/studentdashboard.html'; 
+
+
+
             } else {
                 console.log('not logged in');
                 console.log(window.location.pathname);
