@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
-    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.  0.4/firebase.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -27,7 +27,8 @@
                 <img class="resize" src="img/career-rocket-logo-full-white.png" alt="n/a" />
             </a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -39,7 +40,7 @@
                     <a class="nav-link menu-item menu-item_contact" href="#">Contact</a>
                     <!-- <SimpleContantWrapped/> REPLACE -->
                     <a class="nav-link menu-item_notify menu-item" href="#notify">Notify when Launch</a>
-                    <a class="nav-link menu-item menu-item_contact" href="./login.html">Sign In/Up</a>
+                    <a class="nav-link menu-item menu-item_contact" href="./login.html">Login</a>
                 </form>
 
             </div>
@@ -48,9 +49,23 @@
         <h1 class="heading-primary">Explore your future.</h1>
         <h3 class="heading-tertiary">We help high school students prepare their career by connecting them to working professionals.</h3>
 
-        <div class="button_div">
-            <button class="btn-more" id="createModal">Learn More</button>
+
+        <div class="row">
+                <div class="col-md-2" style="background:rgba(255, 255, 255, 0)">&nbsp;</div>
+                <div class="col-md-2" style="background:rgba(255, 255, 0, 0)">&nbsp;</div>
+            <div class="col-md-2">
+                 <input type='button' value="I'm A Mentor" class="btn-more" onclick="document.location.href='./login.html'"/>
+            </div>
+            <div class="col-md-2">
+                <input type='button' value="I'm A Student" class="btn-more" onclick="document.location.href='./login.html'"/>
+            </div>  
+            <div class="col-md-2" style="background:rgba(255, 255, 0, 0)">&nbsp;</div>
+            <div class="col-md-2" style="background:rgba(255, 255, 0, 0)">&nbsp;</div>
+
+
+            <!-- Fix this for responsive design.  -->
         </div>
+
     </section>
 
     <section class="features">
@@ -61,7 +76,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <img src="https://iconspace.co/wp-content/themes/sebo-iconspace/assets/img/landing/feature-new-2.svg" class="info_card_image" />
+                    <img src="https://iconspace.co/wp-content/themes/sebo-iconspace/assets/img/landing/feature-new-2.svg" class="info_card_image"
+                    />
                     <div class="text_card">
                         Career Quiz
                     </div>
@@ -71,7 +87,8 @@
 
                 </div>
                 <div class="col-4">
-                    <img src="https://iconspace.co/wp-content/themes/sebo-iconspace/assets/img/landing/feature-new-3.svg" class="info_card_image" />
+                    <img src="https://iconspace.co/wp-content/themes/sebo-iconspace/assets/img/landing/feature-new-3.svg" class="info_card_image"
+                    />
                     <div class="text_card">
                         Explore Professions
                     </div>
@@ -81,7 +98,8 @@
 
                 </div>
                 <div class="col-4">
-                    <img src="https://iconspace.co/wp-content/themes/sebo-iconspace/assets/img/landing/feature-new-4.svg" class="info_card_image" />
+                    <img src="https://iconspace.co/wp-content/themes/sebo-iconspace/assets/img/landing/feature-new-4.svg" class="info_card_image"
+                    />
                     <div class="text_card">
                         Connect to Professionals
                     </div>
@@ -94,7 +112,8 @@
 
             <div class="row secondRow">
                 <div class="col-4">
-                    <img src="https://iconspace.co/wp-content/themes/sebo-iconspace/assets/img/landing/feature-new-1.svg" class="info_card_image" />
+                    <img src="https://iconspace.co/wp-content/themes/sebo-iconspace/assets/img/landing/feature-new-1.svg" class="info_card_image"
+                    />
                     <div class="text_card">
                         Job Experience
                     </div>
@@ -103,7 +122,8 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <img src="https://iconspace.co/wp-content/themes/sebo-iconspace/assets/img/landing/feature-new-5.svg" class="info_card_image" />
+                    <img src="https://iconspace.co/wp-content/themes/sebo-iconspace/assets/img/landing/feature-new-5.svg" class="info_card_image"
+                    />
                     <div class="text_card">
                         Build Your Network
                     </div>
@@ -112,7 +132,8 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <img src="https://iconspace.co/wp-content/themes/sebo-iconspace/assets/img/landing/feature-new-6.svg" class="info_card_image" />
+                    <img src="https://iconspace.co/wp-content/themes/sebo-iconspace/assets/img/landing/feature-new-6.svg" class="info_card_image"
+                    />
                     <div class="text_card">
                         Free of Charge
                     </div>
@@ -146,8 +167,10 @@
     <script src="js/libraries/jquery.min.js"></script>
     <script src="js/libraries/jquery.min.js"></script>
     <script src="js/components/smoothscroll.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
 
 </body>
