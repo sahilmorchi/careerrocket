@@ -1,7 +1,12 @@
-.student-side {
-    color: red;
+/* .student-side {
+    background-color: red;
 }
 
 .mentor-side {
-    color: blue;
+    background-color: blue;
+} */
+
+.center {
+    text-align: center;
 }
+
