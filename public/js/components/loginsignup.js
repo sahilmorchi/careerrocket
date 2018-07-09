@@ -1,8 +1,6 @@
 (function () {
         //initialize firebase
 
- 
-
         const config = {
             apiKey: "AIzaSyCBkT2QkwUwjCdQMRi0GIGEohkm8QqNDrY",
             authDomain: "careerrocket-f93ee.firebaseapp.com",
@@ -133,7 +131,6 @@
             window.location = '../../index.html';
         });
     }
-    //hello
     //add a realtime listener
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (window.location.pathname === '/login.html') {
@@ -142,7 +139,7 @@
 
             if (firebaseUser) {
                 console.log("Login success!")
-                // window.location = '../../studentdashboard/studentdashboard.html'; 
+                window.location = '../../studentdashboard/studentdashboard.html'; 
 
 
 
@@ -168,27 +165,13 @@
                     "firstName": "Karthik"
                 });
                 console.log(uid);
-                // window.location = '../../studentmentor.html'; 
+                window.location = '../../studentmentor.html'; 
             } else {
                 console.log('not logged in');
                 // TODO: Display this text somewhere on the screen for user notice.
-            }
-
-            
+            }       
         }
-
-        // if (firebaseUser) {
-        //     console.log("Success!")
-        //     window.location = "../../studentmentor.html";
-        // } else {
-        //     console.log("Failure")
-        // }   
     });
 
 }());
 
-
-
-// document.getElementById("closeButton").addEventListener('click', e => {
-//     console.log("Hello!")
-// });
