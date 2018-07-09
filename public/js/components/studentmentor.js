@@ -1,3 +1,4 @@
+
 (function () {
     //initialize firebase
     const config = {
@@ -71,43 +72,47 @@
         "mentorAbout": mentorAbout.value,
     }
 
-    function writeUserData(userId, name, email, imageUrl) {
-        firebase.database().ref('users/' + userId).set({
-          username: name,
-          email: email,
-          profile_picture : imageUrl
-        });
+    function writeUserData(text) {
+        firebase.database().ref().set(text);
       }
 
+
     $('#mentorSubmit').click(function(){
-        console.log("Booper");
-        // var firebaseRef = firebase.database()
 
-        // var specificMentor = firebaseRef.child("users").child("mentors").child("mentor1");
+        // console.log(firebaseUser);
 
-        // firebaseRef.set({
-        //     "role": "mentor",
-        //     "mentorfirstName": mentorFirstName.value,
-        //     "mentorlastName": mentorLastName.value,
-        //     "mentorEmail": mentorEmail.value,
-        //     "mentorCompany": mentorCompany.value,
-        //     "mentorPhone": mentorPhone.value,
-        //     "mentorField": mentorField.value,
-        //     "mentorAbout": mentorAbout.value,
-        // })
+        var uid = "blank";
+        
 
-        // firebase.database().ref('users/' + userId).set({
-        //     username: "hello",
-        //     email: "kvvetrivel@gmail.com",
-        //     profile_picture : "hello",
-        //   });;
+        firebase.auth().onAuthStateChanged((firebaseUser) => {
+            if (firebaseUser) {
+                console.log(firebaseUser);
+                uid = firebaseUser.uid;
 
-        // firebaseRef.set("Hi");
+                var firebaseRef = firebase.database().ref().child("users").child("mentors").child("formData").child(uid);
 
 
+                console.log(uid);
+
+
+
+                firebaseRef.set({
+                    "mentorfirstName": mentorFirstName,
+                    "mentorlastName": mentorLastName,
+                    "mentorEmail": mentorEmail,
+                    "mentorCompany": mentorCompany,
+                    "mentorPhone": mentorPhone,
+                    "mentorField": mentorField,
+                    "mentorAbout": mentorAbout,
+
+                });
+
+            }
 
         window.location = '../../mentordashboard/mentordashboard.html';
-    })
+    });
+
+})
 
 
 }());

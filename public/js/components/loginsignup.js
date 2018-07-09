@@ -141,11 +141,8 @@
 
 
             if (firebaseUser) {
-
-
                 console.log("Login success!")
-                console.log(firebaseUser);
-                window.location = '../../studentdashboard/studentdashboard.html'; 
+                // window.location = '../../studentdashboard/studentdashboard.html'; 
 
 
 
@@ -163,8 +160,15 @@
         if (window.location.pathname === '/signup.html') {
             console.log("from the sign up page")
             if (firebaseUser) {
-                console.log(firebaseUser);
-                window.location = '../../studentmentor.html'; 
+                var uid = firebaseUser.uid;
+
+                var firebaseRef = firebase.database().ref().child("users").child("mentors").child("formData").child(uid);
+
+                firebaseRef.set({
+                    "firstName": "Karthik"
+                });
+                console.log(uid);
+                // window.location = '../../studentmentor.html'; 
             } else {
                 console.log('not logged in');
                 // TODO: Display this text somewhere on the screen for user notice.

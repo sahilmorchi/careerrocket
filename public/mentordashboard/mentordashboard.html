@@ -11,8 +11,10 @@
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/studentdashboard.css">
     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script src="../js/components/mentordashboard.js"></script>
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
@@ -23,11 +25,11 @@
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <img     class="logo" src="../img/career-rocket-logo-full-white.png" alt="">
+                <img class="logo" src="../img/career-rocket-logo-full-white.png" alt="">
             </div>
 
             <ul class="list-unstyled components">
-                <p>*Full Name*</p>
+                <p id="fullName">*Full Name*</p>
                 <li>
                     <a href="mentordashboard.html">Home</a>
                     <!-- <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -65,7 +67,7 @@
                 </li>
 -->
                 <li>
-                    <!-- <a href="#">Portfolio</a> -->
+                    <!-- <a href="#me">Portfolio</a> -->
                 </li>
 <!--
                 <li>
